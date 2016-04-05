@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+          <div class="panel panel-info">
+            <div class="panel-heading">
+              <h3 class="panel-title">Add Account</h3>
+            </div>
+            <div class="panel-body">
+              <script type="text/javascript" src="https://www.paybook.com/lib/js/widget/widget.js"></script>
+              <script type="text/javascript">
+                pbWidget.setDev();
+                pbWidget.setToken('<%= token %>');
+                pbWidget.chooseBank();
+              </script>
+              <div id="paybook-container"></div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="row" ng-controller="accountsController">
+        <div class="col-sm-12">
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">View Accounts</h3>
+            </div>
+            <div class="panel-body">
+              <div class="list-group">
+                <% accounts.forEach(function(account){ %>
+                    <button type="button" class="list-group-item" ng-click="getTransactions('<%= account.id_account %>')">
+                      <img src="<%= host %><%= account.site.avatar %>" class="site-avatar">
+                      <%= account.site.name %>
+                      <%= account.name %>
+                    </button>
+                <% }) %>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+</div>

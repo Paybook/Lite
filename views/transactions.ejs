@@ -1,0 +1,13 @@
+<div ng-controller="transactionsController" ng-init="id_account='<%= id_account %>';">
+  <img src="<%= host %><%= account.site.avatar %>" class="site-avatar">
+  <%= account.site.name %>
+  <%= account.name %>
+  <h4 class="page-header">Transactions: {{total}}</h4>
+  <table ng-table="tableParams" class="table table-responsive table-inverse set-bg">
+    <tr ng-repeat="row in $data">
+      <td data-title="'Date'" sortable="'dt_transaction'">{{row.dt_transaction | date : format : timezone}}</td>
+      <td data-title="'Description'" sortable="'description'" filter="{description: 'text'}">{{row.description}}</td>
+      <td data-title="'Amount'" sortable="'amount'">{{row.amount | currency : symbol : fractionSize}}</td>
+    </tr>
+  </table>
+</div>
