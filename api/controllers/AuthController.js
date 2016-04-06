@@ -10,6 +10,12 @@ module.exports = {
 
     login: function(req, res) {
 
+      var pbsync = validate.keyCheck();
+      if (!pbsync){
+        res.json({error: 'Missing api_key'});
+        return false;
+      }
+
       passport.authenticate('local', function(err, user, info) {
         if ((err) || (!user)) {
           return res.send({
@@ -31,9 +37,7 @@ module.exports = {
             req.session.id_user = user.id_user;
 
             res.redirect('/accounts');
-
           });
-
         });
 
       })(req, res);
@@ -45,6 +49,12 @@ module.exports = {
     },
 
     session: function(req,res) {
+      var pbsync = validate.keyCheck();
+      if (!pbsync){
+        res.json({error: 'Missing api_key'});
+        return false;
+      }
+
       session = {status:req.isAuthenticated()};
 
       return res.json(session);

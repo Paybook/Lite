@@ -48,9 +48,10 @@ module.exports.policies = {
 		// before letting any users feed our rabbits
 		// feed : ['isNiceToAnimals', 'hasRabbitFood']
 	// }
-  '*': true,
+  // '*': true,
 
-  'PostController': {
-    '*': 'isAuthenticated'
-  },
+  '*' : 'isAuthenticated',
+
+  // 'TweetsController': true,
+  'AuthController': true,
 };

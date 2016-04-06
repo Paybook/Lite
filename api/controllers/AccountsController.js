@@ -46,9 +46,7 @@ module.exports = {
     Accounts.
     find().
     then(function(accounts){
-      sails.log(accounts);
       response.accounts = accounts;
-      sails.log(response);
 
       res.view('widget', response);
     });

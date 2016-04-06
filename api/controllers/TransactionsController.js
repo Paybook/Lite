@@ -47,7 +47,6 @@ module.exports = {
 
     }).
     then(function(transaction){
-      sails.log("Transaction: " + JSON.stringify(transaction));
       return true;
     });
 
@@ -56,7 +55,6 @@ module.exports = {
     Accounts.
     find({id_account: id_account}).
     then(function(account){
-      sails.log(account);
       response.account = account[0];
 
       res.view('transactions', response);
