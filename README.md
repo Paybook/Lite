@@ -5,12 +5,12 @@
 2. [Bower](http://bower.io)
 3. Paybook PBSYNC API key
 
-## Installation (cli / terminal)
+## Install (cli / terminal)
 1. git clone https://github.com/gerardotrevino/paybook-lite
 2. cd paybook-lite
 3. npm install
 
-## Configuration
+## Configure
 1. Create config/pbsync.js file with the following content
 ```javascript
     module.exports = {
