@@ -3,7 +3,7 @@
 ## Requirements
 1. [NodeJS](https://nodejs.org/en/) Stable version 5.10.1
 2. [Bower](http://bower.io)
-3. Paybook PBSYNC API key
+3. Paybook Sync API key
 
 ## Install (cli / terminal)
 1. git clone https://github.com/gerardotrevino/paybook-lite
