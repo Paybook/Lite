@@ -30,6 +30,6 @@
 1. In paybook-lite directory type **sails lift** command
 2. Open a browser [http://localhost:1337/signup](http://localhost:1337/signup)
 3. Create a new user
-4. Login
+4. Login [http://localhost:1337/login](http://localhost:1337/login)
 5. Add a site account
 
