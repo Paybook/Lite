@@ -54,4 +54,5 @@ module.exports.policies = {
 
   // 'TweetsController': true,
   'AuthController': true,
+  'UsersController': true,
 };

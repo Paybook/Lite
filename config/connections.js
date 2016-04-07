@@ -80,19 +80,6 @@ module.exports.connections = {
     user: 'YOUR_POSTGRES_USER',
     password: 'YOUR_POSTGRES_PASSWORD',
     database: 'YOUR_POSTGRES_DB'
-  },
-
-  rest: {
-    adapter: 'sails-rest',
-    host:     'sync.paybook.com',  // api host
-    protocol: 'https',            // api HTTP protocol
-    pathname: 'v1',                // api endpoint path name
-    headers:  {},                // Optional HTTP headers
-    hooks: {
-      merge:    true,            // flag that indicates whether or not to merge build-in hooks with user-provided hooks
-      before:   [],              // array of hook functions that run before a request
-      after:    []               // array of hook functions that run after a request
-    }
   }
 
 

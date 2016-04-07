@@ -1,5 +1,6 @@
 var https = require('https');
 
+// API rest service
 module.exports = {
 
   post: function(options, cb){

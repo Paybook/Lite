@@ -22,7 +22,7 @@ module.exports = {
   },
 
   models: {
-    connection: 'pbsync_client_sails',
+    // connection: 'pbsync_client_sails',
   },
 
 };

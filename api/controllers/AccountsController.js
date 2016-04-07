@@ -16,13 +16,12 @@ module.exports = {
 
     // Check accounts
     Accounts.
-    count().
+    count({id_user: req.session.id_user}).
     then(function(accounts){
       if (accounts === 0){
         var options = JSON.parse(JSON.stringify(sails.config.pbsync.options));
 
         options.path += "/accounts?token=" + req.session.token;
-
         // Get accounts from pbaynsc
         apiRest.get(options, function(accountsPbsync){
 

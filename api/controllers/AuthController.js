@@ -10,6 +10,7 @@ module.exports = {
 
     login: function(req, res) {
 
+      // Validate API key
       var pbsync = validate.keyCheck();
       if (!pbsync){
         res.json({error: 'Missing api_key'});

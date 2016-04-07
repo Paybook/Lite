@@ -19,14 +19,19 @@ module.exports = {
     var options = JSON.parse(JSON.stringify(sails.config.pbsync.options));
     options.path += "/transactions?token=" + req.session.token + "&id_account=" + id_account;
 
+    // Get last transaction
     Transactions.
-    find({id_account: id_account}).
+    find({
+      id_account: id_account,
+      id_user: req.session.id_user
+    }).
     sort('date DESC').
     limit(1).
     then(function(transaction){
       if (transaction === undefined || transaction.length === 0){
         sails.log("No transactions found");
 
+        // Create transactions on local db
         apiRest.get(options, function(transactions){
 
           Transactions.
@@ -52,6 +57,7 @@ module.exports = {
 
     response.id_account = id_account;
 
+    // Get local account
     Accounts.
     find({id_account: id_account}).
     then(function(account){
@@ -61,6 +67,7 @@ module.exports = {
     });
   },
 
+  // Count transactions
   count:function (req, res){
     Transactions.count({id_account: req.session.id_account}).exec(function(error,count){
       return res.json({
