@@ -24,7 +24,7 @@
       }
     };
 ```
-2. Replace XXXXXX with your API key
+> Replace XXXXXX with your API key
 
 ## Execute (cli / terminal)
 1. In paybook-lite directory type **sails lift** command
