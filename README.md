@@ -16,7 +16,7 @@ A very simple and light web application to demonstrate how to take advantage of 
 ```javascript
     module.exports = {
       pbsync : {
-        api_key: "XXXXXX",
+        api_key: "YOUR-API-KEY-HERE",
         options: {
           host: 'sync.paybook.com',
           port: 443,
