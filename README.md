@@ -11,7 +11,6 @@
 
 ## Configuration
 1. Create config/pbsync.js file with the following content
-
 ```javascript
     module.exports = {
       pbsync : {
