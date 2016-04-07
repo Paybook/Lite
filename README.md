@@ -12,6 +12,7 @@
 ## Configuration
 1. Create config/pbsync.js file with the following content
 
+```javascript
     module.exports = {
       pbsync : {
         api_key: "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
@@ -23,6 +24,7 @@
         host_files : 'https://s.paybook.com',
       }
     };
+```
 
 ## Execute (cli / terminal)
 1. In paybook-lite directory type **sails lift** command
