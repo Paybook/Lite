@@ -15,7 +15,7 @@
 ```javascript
     module.exports = {
       pbsync : {
-        api_key: "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+        api_key: "XXXXXX",
         options: {
           host: 'sync.paybook.com',
           port: 443,
@@ -25,6 +25,7 @@
       }
     };
 ```
+2. Replace XXXXXX with your API key
 
 ## Execute (cli / terminal)
 1. In paybook-lite directory type **sails lift** command
