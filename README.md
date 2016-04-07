@@ -26,7 +26,6 @@ A very simple and light web application to demonstrate how to take advantage of 
       }
     };
 ```
-> Replace XXXXXX with your API key
 
 ## Execute (cli / terminal)
 1. In paybook-lite directory type **sails lift** command
