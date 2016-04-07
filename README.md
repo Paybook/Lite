@@ -28,7 +28,7 @@
 
 ## Execute (cli / terminal)
 1. In paybook-lite directory type **sails lift** command
-2. Open a browser [http://localhost:1337](http://localhost:1337/signup)
+2. Open a browser [http://localhost:1337/signup](http://localhost:1337/signup)
 3. Create a new user
 4. Login
 5. Add a site account
