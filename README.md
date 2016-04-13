@@ -7,7 +7,7 @@ A light and simple web application to demonstrate how to take advantage of the P
 3. Paybook Sync API key
 
 ## Install (cli / terminal)
-1. git clone https://github.com/Paybook/Lite/
+1. git clone https://github.com/Paybook/Lite.JS/
 2. cd paybook-lite
 3. npm install
 
