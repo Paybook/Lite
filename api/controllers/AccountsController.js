@@ -14,31 +14,35 @@ module.exports = {
       host: sails.config.pbsync.host_files,
     };
 
-    // Check accounts
-    Accounts.
-    count({id_user: req.session.id_user}).
-    then(function(accounts){
-      if (accounts === 0){
-        var options = JSON.parse(JSON.stringify(sails.config.pbsync.options));
+    // Get pbsync accounts
+    var options = JSON.parse(JSON.stringify(sails.config.pbsync.options));
+    options.path += "/accounts?token=" + req.session.token;
+    apiRest.get(options, function(accountsPbsync){
+      if (accountsPbsync.response.length > 0){
+        accountsPbsync.response.forEach(function(account){
 
-        options.path += "/accounts?token=" + req.session.token;
-        // Get accounts from pbaynsc
-        apiRest.get(options, function(accountsPbsync){
+          // Check if account exists
+          Accounts.
+          count({id_user: req.session.id_user, id_account: account.id_account}).
+          then(function(accounts){
+            if (accounts === 0){
 
-          if (accountsPbsync.response.length > 0){
-            Accounts.
-            create(accountsPbsync.response).
-            exec(function(err, created){
-              if (err){
-                sails.log("Error creating accounts records: " + err);
-                return false;
-              }
+              // Create local account
+              Accounts.
+              create(account).
+              exec(function(err, created){
+                if (err){
+                  sails.log("Error creating accounts records: " + err);
+                  return false;
+                }
 
-              return true;
-            });
-          }
+                return true;
+              });
+            }
+          });
         });
       }
+
     });
 
     // Get local accounts
