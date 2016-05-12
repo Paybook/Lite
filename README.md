@@ -1,4 +1,4 @@
-# Paybook Lite
+# Paybook lite-js
 A light and simple web application to demonstrate how to take advantage of the Paybook Financial API (Sync) to pull information from Mexican Banks and Tax Authority.
 
 ## Requirements
@@ -7,7 +7,7 @@ A light and simple web application to demonstrate how to take advantage of the P
 3. Paybook Sync API key
 
 ## Install (cli / terminal)
-1. git clone https://github.com/Paybook/Lite.JS/
+1. git clone https://github.com/Paybook/lite-js/
 2. cd paybook-lite
 3. npm install
 
@@ -33,4 +33,3 @@ A light and simple web application to demonstrate how to take advantage of the P
 3. Create a new user
 4. Login [http://localhost:1337/login](http://localhost:1337/login)
 5. Add a site account
-
